@@ -1,0 +1,377 @@
+/* MARIAH PALMER
+================================================================== */
+
+:root {
+  --dark: #1A1A1A;
+  --light: #FAFAFA;
+}
+
+
+/* BASE STYLES
+================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: #000000;
+  margin: 0;
+  padding: 0 0 0;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.3;
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: none;
+  overflow-x: hidden;
+  background-color: #190068;
+  background-image: url(images/stars-bg.svg);
+  background-repeat: repeat;
+  background-size: 500px;
+  min-width: 100vw;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* TYPOGRAPHY
+================================================================== */
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+p {}
+
+a {}
+
+a:hover {}
+
+
+
+/* BUILDING
+================================================================== */
+
+.building {
+  width: 40em;
+  max-width: 100vw;
+  background-color: #7F7F7F;
+  position: relative;
+}
+
+section {
+  margin: 3em;
+  position: relative;
+  cursor: pointer;
+}
+
+section:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 100%;
+  transition: opacity 0.5s;
+  background-image: url(images/reflection.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+section:hover:after {
+  opacity: 0%;
+  ;
+}
+
+section img {
+  display: block;
+  margin: 0 auto;
+}
+
+section > img {
+  border: 10px inset white;
+}
+
+.building-top {
+  margin: 0 3em 3em 3em;
+  position: relative;
+}
+
+.building-top img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 3em;
+}
+
+.top-side {
+  position: absolute;
+  right: -6em;
+  width: 3em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bottom-of-building {
+  background: #7F7F7F;
+  height: 30em;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10em
+}
+
+.bottom-of-building:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 5em;
+  background: #8D8E8D;
+}
+
+.bottom-of-building:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 105%;
+  height: 2em;
+  background: #8D8E8D;
+}
+
+.bottom-door {
+  background: #ffffff;
+  width: 8em;
+  height: 10em;
+  position: absolute;
+  bottom: 2em;
+  left: 0em;
+  background-image: url(images/lobby.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.bottom-door:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 100%;
+  transition: opacity 0.5s;
+  background-image: url(images/reflection.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/* SCENERY
+================================================================== */
+
+.dinosaur {
+  position: absolute;
+  bottom: 0;
+  left: 65vw;
+  width: 40em;
+}
+
+.road {
+  background-color: #3D3D3D;
+  min-width: 100em;
+  width: 100vw;
+  height: 20em;
+  position: absolute;
+  bottom: -10em;
+  z-index: -1;
+  border-top: 0.25em solid white;
+}
+
+.road:after {
+  content: '';
+  position: absolute;
+  bottom: 10em;
+  left: 0;
+  width: 100%;
+  background: white;
+  height: 1em;
+}
+
+.background-building-1 {
+  position: absolute;
+  background-color: #6D6B6C;
+  width: 20em;
+  height: 150vh;
+  bottom: 10em;
+  left: 80vw;
+  z-index: -1;
+  max-height: 85%;
+}
+
+@media (min-width: 800px) {
+  .background-building-1 {
+    left: 40em;
+  }
+
+  .dinosaur {
+    left: 36em;
+  }
+}
+
+.background-building-1:after {
+  content: '';
+  position: absolute;
+  right: -5em;
+  top: 0;
+  width: 5em;
+  background: #626262;
+  height: 100%;
+  transform: skewY(30deg);
+  transform-origin: left;
+  z-index: -2;
+}
+
+.background-building-group {
+  position: absolute;
+  bottom: 9em;
+  width: 60vw;
+  left: 60em;
+  z-index: -1;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: end;
+  filter: blur(5px);
+}
+
+.background-building-group>div:first-child {
+  background: #565656;
+  width: 100%;
+  height: 85%;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.background-building-group div:nth-child(2) {
+  background: #565656;
+  width: 100%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.background-building-group>div:last-child {
+  background: #565656;
+  width: 100%;
+  height: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+
+
+/* PROJECT DETAIL OVERLAY
+================================================================== */
+
+.detail {
+  position: fixed;
+  right: 0;
+  width: 50vw;
+  top: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  z-index: 5;
+  min-width: 25em;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  align-content: center;
+  justify-content: center;
+  opacity: 0%;
+  transform: translateX(100vw);
+  transition: opacity 0.5s;
+}
+
+.project-active .detail {
+  transform: translateX(0);
+  opacity: 100%;
+}
+
+.detail-images {
+  position: relative;
+  background: #000000;
+}
+
+.detail-text {
+  padding: 1em;
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.detail-images img {
+  position: absolute;
+  transform: translateX(100%);
+  opacity: 0%;
+  transition: opacity 0.5s;
+}
+
+.detail-images img.active-image {
+  position: relative;
+  transform: translateX(0);
+  opacity: 100%;
+}
+
+
+
+
+
+
+
+
+/* FLYING ANIMATION
+================================================================== */
+.flying {
+  position: absolute;
+  z-index: -1;
+  top: 0vh;
+  left: -5em;
+  width: 16em;
+  animation-name: flying;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flying {
+  0% {
+    transform: translate(0, 20vh);
+
+  }
+
+  100% {
+    transform: translate(100vw, 80vh);
+  }
+
+  
+
+}
